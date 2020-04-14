@@ -1,0 +1,20 @@
+@mixin flex($flex: flex, $direction: column, $justifyContent: space-around, $alignItem: initial) {
+  display: $flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItem;
+}
+@mixin avatar-size($size) {
+  width: $size;
+  height: $size;
+  line-height: $size;
+  &-circle {
+    border-radius: 50%;
+  }
+}
+
+@mixin skeleton-color() {
+  background: linear-gradient(90deg, $skeleton-color 25%, $skeleton-to-color 37%, $skeleton-color 63%);
+  background-size: 400% 100%;
+  animation: dz-skeleton-loading 1.4s ease infinite;
+}
