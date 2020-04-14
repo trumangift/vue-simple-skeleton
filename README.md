@@ -2,7 +2,7 @@
 
 > Vue Skeleton component 骨架屏 easy use 
 
-![Image](https://github.com/trumangift/vue-simple-skeleton/blob/master/src/assets/demo.gif]
+![Image](https://raw.githubusercontent.com/trumangift/vue-simple-skeleton/master/src/assets/demo.gif)
 ## Build Setup
 
 ``` bash
