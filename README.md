@@ -2,6 +2,7 @@
 
 > Vue Skeleton component 骨架屏 easy use 
 
+![Image text](https://github.com/trumangift/vue-simple-skeleton/blob/master/src/assets/demo.gif]
 ## Build Setup
 
 ``` bash
@@ -11,5 +12,3 @@ or
 yarn add vue-simple-skeleton
 
 ```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
