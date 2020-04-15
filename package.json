@@ -1,8 +1,10 @@
 {
   "name": "vue-simple-skeleton",
-  "description": "Vue Skeleton component 骨架屏 easy use",
-  "version": "1.0.1",
+  "description": "Vue Skeleton component First screen loading  easy use 首屏加载 骨架屏",
+  "version": "1.0.2",
+  "keywords": "Vue Skeleton component First screen loading  easy use 首屏加载 骨架屏",
   "author": "liuminghai",
+  "homepage": "https://github.com/trumangift/vue-simple-skeleton",
   "license": "MIT",
   "private": false,
   "main": "dist/vue-simple-skeleton.js",
@@ -13,6 +15,10 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "vue": "^2.5.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trumangift/vue-simple-skeleton.git"
   },
   "browserslist": [
     "> 1%",

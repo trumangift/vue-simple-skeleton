@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class="example example_5">
-      <h1>demo 1 not actived</h1>
-      <skeleton :loading="true"  :active="false" :title="false"   avatar :paragraph="{rows: 10, width: '80%' }" >
+      <h1>demo 1:  not actived, loading, with title 10px, have acatar; paragraph three row, 80% width</h1>
+      <skeleton :loading="true"  :active="false" :title="true"  :title-width="10" avatar :paragraph="{rows: 3, width: '80%' }" >
          <table>
            <thead>
               <tr>
@@ -21,7 +21,7 @@
     </div>
     <div class="example example_6">
       <h1>demo 2 actived with loading data</h1>
-      <skeleton :loading="loading"  :active="true" :title="false"   avatar :paragraph="{rows: 10, width: '80%' }" >
+      <skeleton :loading="loading"  :active="true" :title="false"   avatar :paragraph="{rows: 4, width: '80%' }" >
         <table>
           <thead>
           <tr>
@@ -40,13 +40,13 @@
     </div>
     <div class="example example_1">
       <h1>demo3 actived</h1>
-      <skeleton :loading="true"  :title="false" active  avatar :paragraph="{rows: 10, width: '80%' }" >
+      <skeleton :loading="true"  :title="false" active  avatar :paragraph="{rows: 4, width: '80%' }" >
         123
       </skeleton>
     </div>
     <div class="example example_2">
       <h1>demo4</h1>
-      <skeleton :loading="true"  active  :avatar="false" :paragraph="{rows: 3, width: '100%' }" >
+      <skeleton :loading="true"  active  :avatar="false" :paragraph="{rows: 4, width: '100%' }" >
         123
       </skeleton>
     </div>
@@ -59,6 +59,12 @@
     <div class="example example_4">
       <h1>demo6</h1>
       <skeleton :loading="true"  active  :avatar="false" :paragraph="{rows: 4, width: '90%' }" >
+        123
+      </skeleton>
+    </div>
+    <div class="example example_4">
+      <h1>demo7</h1>
+      <skeleton :loading="true"  :active="false" :title="true"  title-width="60%" avatar :paragraph="{rows: 3, width: '80%' }" >
         123
       </skeleton>
     </div>
@@ -81,7 +87,7 @@ export default {
   mounted() {
       setTimeout(() => {
          this.loading = false;
-      }, 10000);
+      }, 4000);
   }
 }
 </script>
@@ -114,7 +120,7 @@ a {
   color: #42b983;
 }
   .example {
-    width: 600px;
+    width: 400px;
     float: left;
     margin-left: 20px;
   }

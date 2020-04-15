@@ -21,17 +21,17 @@ $skeleton-to-color: darken($skeleton-color, 5%);
     vertical-align: top;
     // Avatar
     .dz-skeleton-avator{
-        display: inline-block;
-        vertical-align: top;
-        background: $skeleton-color;
-        @include avatar-size($avatar-size-base);
-        &-lg {
-          @include avatar-size($avatar-size-lg);
-        }
+      display: inline-block;
+      vertical-align: top;
+      background: $skeleton-color;
+      @include avatar-size($avatar-size-base);
+      &-lg {
+        @include avatar-size($avatar-size-lg);
+      }
 
-        &-sm {
-          @include avatar-size($avatar-size-sm);
-        }
+      &-sm {
+        @include avatar-size($avatar-size-sm);
+      }
     }
   }
   &-content {
@@ -67,6 +67,7 @@ $skeleton-to-color: darken($skeleton-color, 5%);
         width: 100%;
         height: 16px;
         list-style: none;
+        margin: 0;
         background: $skeleton-color;
 
         &:last-child:not(:first-child):not(:nth-child(2)) {
@@ -82,22 +83,23 @@ $skeleton-to-color: darken($skeleton-color, 5%);
   &-with-avatar &-content {
     // Title
     .dz-skeleton-title {
-        margin-top: 12px;
-
-        + .dz-skeleton-paragraph {
-            margin-top: 28px;
-        }
+      margin-top: 12px;
+      height: 16px;
+      background: #f2f2f2;
+      + .dz-skeleton-paragraph {
+        margin-top: 28px;
+      }
     }
   }
 
   &-active {
     .dz-skeleton-content {
-       .dz-skeleton-title,
-       .dz-skeleton-paragraph > li
-         {
-         @include skeleton-color();
-       }
-     }
+      .dz-skeleton-title,
+      .dz-skeleton-paragraph > li
+      {
+        @include skeleton-color();
+      }
+    }
     .dz-skeleton-others {
       @include skeleton-color();
     }

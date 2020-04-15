@@ -1,7 +1,7 @@
 const skeletonTitleProps = {
     width: {
         validator(value) {
-            return ['string', 'number'].indexOf(typeof value) !== -1;
+          return ['[object Number]', '[object String]'].indexOf(Object.prototype.toString.call(value)) !== -1;
         }
     },
     rows: {

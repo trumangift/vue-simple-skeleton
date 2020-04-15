@@ -31,6 +31,12 @@ export const SkeletonProps = {
             return { rows: 4, width: '50%' };
         }
     },
+    titleWidth: {
+        default: '50%',
+        validator(value) {
+            return ['[object Number]', '[object String]'].indexOf(Object.prototype.toString.call(value)) !== -1;
+        }
+    },
     wrapperClass: {
         type: String,
         default: ''
@@ -38,10 +44,10 @@ export const SkeletonProps = {
 };
 
 const Skeleton = {
-    name: 'Vue-Simple-Skeleton',
+    name: 'DZ_Skeleton',
     props: SkeletonProps,
     render() {
-        const { active, loading, avatar, paragraph, title, titleRows } = this.$props;
+        const { active, loading, avatar, paragraph, title, titleRows, titleWidth } = this.$props;
         if (loading || !hasProps(this, 'loading')) {
             const hasAvatar = !!avatar || avatar === '';
             const hasParagraph = !!paragraph;
@@ -55,11 +61,12 @@ const Skeleton = {
             let contentNode;
             if (hasTitle || hasParagraph) {
                 if (typeof paragraph === 'object') {
-                    const rows = paragraph.rows || 4;
-                    const width = paragraph.width || '60%';
+                    const rows = paragraph.rows;
+                    const width = paragraph.width;
+                    let titleNode = hasTitle ? <Title width={titleWidth} rows={titleRows}/> : null;
                     contentNode = (
                         <div class='dz-skeleton-content'>
-                            <Title width='40%' rows={titleRows}/>
+                            {titleNode}
                             <Paragraph width={width} rows={rows} >
                             </Paragraph>
                         </div>);
