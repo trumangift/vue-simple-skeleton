@@ -83,7 +83,10 @@ const Skeleton = {
                 </div>
             );
         }
-        return this.$slots.default && this.$slots.default[0];
+        const wrapperNode = this.$slots.default && this.$slots.default.length > 1 ? <div>
+          {this.$slots.default }
+        </div> : this.$slots.default && this.$slots.default[0];
+        return wrapperNode;
     }
 };
 export default Skeleton;
