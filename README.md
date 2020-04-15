@@ -1,6 +1,6 @@
 # vue-simple-skeleton
 
-> Vue Skeleton component 骨架屏 easy easy easy use first screen loading page e
+> Vue Skeleton component  easy easy easy use vue first screen loading page 骨架屏 首屏加载
 
 ![Image](https://github.com/trumangift/vue-simple-skeleton/raw/master/src/assets/demo.gif)
 ##骨架屏是什么?
